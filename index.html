@@ -5,22 +5,27 @@
       body {
         font-family: serif;
       }
-
       main {
         margin: 50px auto;
         max-width: 600px;
         padding: 0 20px;
       }
+      a {
+        font-weight: 700;
+      }
     </style>
   </head>
   <body>
-    <h1>Redacted Font Bookmarklet</h1>
     <main>
-      <p>
-        <span>Add </span>
-        <a title="Redact" href="(function(){const styleId='texts-redacted';let styleElement=document.getElementById(styleId);if(!styleElement){const styleElement=document.createElement('style');styleElement.id=styleId;styleElement.textContent='@import url(\'https://fonts.googleapis.com/css2?family=Redacted+Script:wght@300;400;700&display=swap\'); * { font-family: \'Redacted Script\' !important; }';document.head.appendChild(styleElement)}else{document.head.removeChild(styleElement)}})()"> this link</a>
-        <span> to your bookmark and click on websites toggle the script.</span>
-      </p>
+      <h1>Redacted Font Bookmarklet</h1>
+      <p>Drag the following link over to the bookmark bar to make it available for usage.</p>
+      <p>Once added, go to any website and click on the bookmarklet to toggle the redacted font.</p>
+      <a
+        title="Redact"
+        href="javascript(function(){const styleId='texts-redacted';let styleElement=document.getElementById(styleId);if(!styleElement){const styleElement=document.createElement('style');styleElement.id=styleId;styleElement.textContent='@import url(\'https://fonts.googleapis.com/css2?family=Redacted+Script:wght@300;400;700&display=swap\'); * { font-family: \'Redacted Script\' !important; }';document.head.appendChild(styleElement)}else{document.head.removeChild(styleElement)}})()"
+      >
+        Redact
+      </a>
     </main>
   </body>
 </html>
