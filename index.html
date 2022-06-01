@@ -13,22 +13,41 @@
         max-width: 600px;
         padding: 0 10px;
       }
-      a {
+      .bookmarklet-button {
         font-weight: 700;
+        font-size: 2rem;
       }
     </style>
   </head>
   <body>
     <main>
       <h1>Redacted Font Bookmarklet</h1>
+      <p>
+        <a
+          href="https://support.mozilla.org/en-US/kb/bookmarklets-perform-common-web-page-tasks"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Bookmarklet
+        </a>
+        <span> to toggle overriding the page's font with </span>
+        <a
+          href="https://github.com/christiannaths/redacted-font"
+          target="_blank"
+          rel="noreferrer"
+        >
+        Redacted Script Fonts
+        </a>
+        <span>.</span>
       <p>Drag the following link over to the bookmark bar to make it available for usage.</p>
-      <p>Once added, go to any website and click on the bookmarklet to toggle the redacted font.</p>
       <a
         title="Redact"
+        className="bookmarklet-button"
         href="javascript:(function(){const styleId='texts-redacted';let styleElement=document.getElementById(styleId);if(!styleElement){const styleElement=document.createElement('style');styleElement.id=styleId;styleElement.textContent='@import url(\'https://fonts.googleapis.com/css2?family=Redacted+Script:wght@300;400;700&display=swap\'); * { font-family: \'Redacted Script\' !important; }';document.head.appendChild(styleElement)}else{document.head.removeChild(styleElement)}})()"
       >
         Redact
       </a>
+      <p>Once added, go to any website and click on the bookmarklet to toggle the redacted font.</p>
     </main>
   </body>
 </html>
